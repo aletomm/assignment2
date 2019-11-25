@@ -7,4 +7,16 @@
   ////////////////////////////////////////////////////////////////////" />
 		<property name="fileExtensions" value="java" />
 	</module>
+	<module name="BooleanExpressionComplexity"/>
+  	<module name="CyclomaticComplexity"/>
+	<module name="LineLength"/>
+  	<module name="FileLength"/>
+	<module name="MethodLength"/>
+	<module name="EmptyCatchBlock">
+  		<property name="exceptionVariableName" value="expected|ignore"/>
+	</module>
+	<module name="FileTabCharacter"/>
+	<module name="AvoidStarImport"/>
+	<module name="IllegalImport"/>
+	<module name="NeedBraces"/>
 </module>
