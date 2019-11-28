@@ -14,8 +14,11 @@ public class MenuItem {
 
         itemType = prod;
         name = nome;
-        price = prezzo;
-
+        if(prezzo < 0) {
+        	price = - prezzo;
+        }else {
+        	price = prezzo;
+        }
     }
 
     public String getItemType() { return itemType.toString(); }
