@@ -19,7 +19,7 @@ public class Bill implements TakeAwayBill {
         double cheapestPanino = Double.MAX_VALUE ;
         
         if(itemsOrdered.size()>30) {
-            throw new TakeAwayBillException();
+            throw new TakeAwayBillException("Hai inserito troppe ordinazioni!");
         }
 
         Iterator<MenuItem> iter = itemsOrdered.iterator();

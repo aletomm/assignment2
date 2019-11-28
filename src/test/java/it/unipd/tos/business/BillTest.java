@@ -27,7 +27,7 @@ public class BillTest {
 	
 	//ISSUE 5
 	@Test
-	public void testOrdineInferioreDi10Euro() {
+	public void testOrdineInferioreDi10Euro() throws TakeAwayBillException{
 		
 		ordini.add(new MenuItem(MenuItem.Prodotti.Panini, "PaninoVegetariano", 8.5));
 		assertEquals(9, conto.getOrderPrice(ordini), 0.0);
@@ -35,7 +35,7 @@ public class BillTest {
 	}
 	//ISSUE 2
 	@Test
-	public void testOrdinePiuDi5Panini() {
+	public void testOrdinePiuDi5Panini() throws TakeAwayBillException{
 		
 		ordini.add(new MenuItem(MenuItem.Prodotti.Panini, "PaninoVegetariano", 8.5));
 		ordini.add(new MenuItem(MenuItem.Prodotti.Panini, "PaninoConCarne", 5.5));
@@ -50,7 +50,7 @@ public class BillTest {
 	}
 	//ISSUE 3
 	@Test
-	public void testOrdinePiuDi50Euro() {
+	public void testOrdinePiuDi50Euro() throws TakeAwayBillException{
 		
 		ordini.add(new MenuItem(MenuItem.Prodotti.Panini, "PaninoVegetariano", 8.5));
 		ordini.add(new MenuItem(MenuItem.Prodotti.Panini, "PaninoConCarne", 25.5));
@@ -66,13 +66,14 @@ public class BillTest {
 
 	
     @org.junit.Rule
-    public ExpectedException error= ExpectedException.none();
+    public ExpectedException error = ExpectedException.none();
     
     //ISSUE 4
     @Test
     public void testNonPiuDi30Elementi() throws TakeAwayBillException
     {
         error.expect(TakeAwayBillException.class);
+        error.expectMessage("Hai inserito troppe ordinazioni!");
         
         for(int i=0;i<31;i++)
         {
@@ -80,14 +81,14 @@ public class BillTest {
         }
         
         conto.getOrderPrice(ordini);
-        //Aggiungo piu' di 30 elementi all'ordine ed ottenfo un'eccezione
+        //Aggiungo piu' di 30 elementi all'ordine ed ottengo un'eccezione
         
     }
     
     //ISSUE 1 -> Comprende test con input misti o errati
     
     @Test
-    public void testOrdinePiuDi50EuroPaniniEFrittiConPiuDi5Panini() {
+    public void testOrdinePiuDi50EuroPaniniEFrittiConPiuDi5Panini() throws TakeAwayBillException{
     	ordini.add(new MenuItem(MenuItem.Prodotti.Panini, "PaninoVegetariano", 8.5));
 		ordini.add(new MenuItem(MenuItem.Prodotti.Fritti, "FrittoMistico", 5.5));
 		ordini.add(new MenuItem(MenuItem.Prodotti.Panini, "Toast", 4.0));
@@ -104,7 +105,7 @@ public class BillTest {
     }
     
     @Test
-    public void testOrdinePiuDi50SoloBibite() {
+    public void testOrdinePiuDi50SoloBibite() throws TakeAwayBillException{
     	
     	for(int i=0;i<15;i++)
         {
@@ -116,7 +117,7 @@ public class BillTest {
     }
     
     @Test
-    public void testOrdinePiuDi50EuroPaniniEFrittiConMenoDi5Panini() {
+    public void testOrdinePiuDi50EuroPaniniEFrittiConMenoDi5Panini() throws TakeAwayBillException{
     	ordini.add(new MenuItem(MenuItem.Prodotti.Panini, "PaninoVegetariano", 48.5));
 		ordini.add(new MenuItem(MenuItem.Prodotti.Fritti, "FrittoMistico", 5.5));
 		ordini.add(new MenuItem(MenuItem.Prodotti.Panini, "Toast", 4.0));
