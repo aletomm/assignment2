@@ -1,6 +1,5 @@
 /Users/alessandro/Desktop/Universita/terzo_anno/TOS/assignment2/assignment2/src/main/java/it/unipd/tos/model/MenuItem.java
-/Users/alessandro/Desktop/Universita/terzo_anno/TOS/assignment2/assignment2/src/main/java/it/unipd/tos/business/RestaurantBill.java
-/Users/alessandro/Desktop/Universita/terzo_anno/TOS/assignment2/assignment2/src/main/java/it/unipd/tos/business/exception/RestaurantBillException.java
 /Users/alessandro/Desktop/Universita/terzo_anno/TOS/assignment2/assignment2/src/main/java/it/unipd/tos/App.java
 /Users/alessandro/Desktop/Universita/terzo_anno/TOS/assignment2/assignment2/src/main/java/it/unipd/tos/business/TakeAwayBill.java
 /Users/alessandro/Desktop/Universita/terzo_anno/TOS/assignment2/assignment2/src/main/java/it/unipd/tos/business/exception/TakeAwayBillException.java
+/Users/alessandro/Desktop/Universita/terzo_anno/TOS/assignment2/assignment2/src/main/java/it/unipd/tos/business/Bill.java
