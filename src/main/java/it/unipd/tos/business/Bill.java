@@ -28,7 +28,7 @@ public class Bill implements TakeAwayBill {
             MenuItem item = iter.next();
 
             if(item.getItemType()=="Bevande") {
-            	
+ 
             billBibite = billBibite + item.getPrice();
 
         } else if (item.getItemType()=="Panini") {

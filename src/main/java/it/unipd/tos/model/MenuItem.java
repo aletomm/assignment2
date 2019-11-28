@@ -15,9 +15,9 @@ public class MenuItem {
         itemType = prod;
         name = nome;
         if(prezzo < 0) {
-        	price = - prezzo;
+            price = - prezzo;
         }else {
-        	price = prezzo;
+             price = prezzo;
         }
     }
 
