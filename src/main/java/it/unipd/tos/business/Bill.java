@@ -7,19 +7,19 @@ package it.unipd.tos.business;
 import java.util.Iterator;
 import java.util.List;
 
-import it.unipd.tos.business.exception.RestaurantBillException;
+import it.unipd.tos.business.exception.TakeAwayBillException;
 import it.unipd.tos.model.MenuItem;
 
-public class RestaurantBill implements TakeAwayBill {
+public class Bill implements TakeAwayBill {
     @Override
-    public double getOrderPrice(List<MenuItem> itemsOrdered) throws RestaurantBillException{
+    public double getOrderPrice(List<MenuItem> itemsOrdered) throws TakeAwayBillException{
         int paniniCounter = 0;
         double billPaniniAndFritti = 0.0;
         double billBibite = 0.0;
         double cheapestPanino = Double.MAX_VALUE ;
         
         if(itemsOrdered.size()>30) {
-            throw new RestaurantBillException();
+            throw new TakeAwayBillException();
         }
 
         Iterator<MenuItem> iter = itemsOrdered.iterator();
