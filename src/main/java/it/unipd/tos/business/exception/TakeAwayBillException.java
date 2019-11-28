@@ -2,16 +2,11 @@
 // [Alessandro] [Tommasin] [1189293]
 ////////////////////////////////////////////////////////////////////
 
-package it.unipd.tos;
+package it.unipd.tos.business.exception;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-public static void main( String[] args )
+public class TakeAwayBillException extends Exception{
+    public TakeAwayBillException(String message)
     {
-        System.out.println( "Hello World!" );
+        super(message);
     }
 }
