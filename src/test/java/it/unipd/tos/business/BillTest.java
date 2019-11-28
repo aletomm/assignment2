@@ -130,4 +130,12 @@ public class BillTest {
     	//Applico lo sconto del 10%
 		// -> 89 - 8.9 = 80.1
     }
+    
+    @Test
+    public void testOrdineVuoto() throws TakeAwayBillException{
+    	
+		assertEquals(0.0, conto.getOrderPrice(ordini), 0.0);
+
+    }//Se effettuo un ordine senza nulla devo pagare 0 Euro
+    
 }

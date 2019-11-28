@@ -18,6 +18,10 @@ public class Bill implements TakeAwayBill {
         double billBibite = 0.0;
         double cheapestPanino = Double.MAX_VALUE ;
         
+        if(itemsOrdered.isEmpty()) {
+             return 0.0;
+        }
+        
         if(itemsOrdered.size()>30) {
             throw new TakeAwayBillException("Hai inserito troppe ordinazioni!");
         }
