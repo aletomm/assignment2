@@ -1,3 +1,7 @@
+////////////////////////////////////////////////////////////////////
+// [Alessandro] [Tommasin] [1189293]
+////////////////////////////////////////////////////////////////////
+
 package it.unipd.tos;
 
 /**
@@ -6,7 +10,7 @@ package it.unipd.tos;
  */
 public class App 
 {
-    public static void main( String[] args )
+public static void main( String[] args )
     {
         System.out.println( "Hello World!" );
     }
