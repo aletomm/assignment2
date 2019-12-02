@@ -138,4 +138,14 @@ public class BillTest {
 
     }//Se effettuo un ordine senza nulla devo pagare 0 Euro
     
+    @Test
+    public void testListaNulla() throws TakeAwayBillException{
+        error.expect(TakeAwayBillException.class);
+        error.expectMessage("Hai inserito una lista nulla!");
+        
+        conto.getOrderPrice(null);     
+        
+    }//Se provo a calcolare il totale di una lista NULL ricevo un errore
+    
+    
 }

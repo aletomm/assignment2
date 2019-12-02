@@ -1,7 +1,6 @@
-#Thu Nov 28 18:37:27 CET 2019
-/Users/alessandro/Desktop/Universita/terzo_anno/TOS/assignment2/assignment2/src/main/java/it/unipd/tos/business/TakeAwayBill.java=1574960803000
-/Users/alessandro/Desktop/Universita/terzo_anno/TOS/assignment2/assignment2/src/main/java/it/unipd/tos/model/MenuItem.java=1574962245000
-/Users/alessandro/Desktop/Universita/terzo_anno/TOS/assignment2/assignment2/src/main/java/it/unipd/tos/business/Bill.java=1574962630000
-/Users/alessandro/Desktop/Universita/terzo_anno/TOS/assignment2/assignment2/src/main/java/it/unipd/tos/App.java=1574960803000
-/Users/alessandro/Desktop/Universita/terzo_anno/TOS/assignment2/assignment2/src/main/java/it/unipd/tos/business/exception/TakeAwayBillException.java=1574962245000
-configuration*?=C242C5808634C86180DD7184D9FBB7EBF954C436
+#Mon Dec 02 10:31:49 CET 2019
+/Users/alessandro/Desktop/Universita/terzo_anno/TOS/assignment2/assignment2/src/main/java/it/unipd/tos/business/TakeAwayBill.java=1574965211000
+/Users/alessandro/Desktop/Universita/terzo_anno/TOS/assignment2/assignment2/src/main/java/it/unipd/tos/model/MenuItem.java=1574965211000
+/Users/alessandro/Desktop/Universita/terzo_anno/TOS/assignment2/assignment2/src/main/java/it/unipd/tos/business/Bill.java=1575278982000
+/Users/alessandro/Desktop/Universita/terzo_anno/TOS/assignment2/assignment2/src/main/java/it/unipd/tos/business/exception/TakeAwayBillException.java=1574965211000
+configuration*?=AB29A03ACB6044A601A84D251D71DF16CE73C780
