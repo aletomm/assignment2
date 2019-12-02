@@ -17,15 +17,19 @@ public class Bill implements TakeAwayBill {
         double billPaniniAndFritti = 0.0;
         double billBibite = 0.0;
         double cheapestPanino = Double.MAX_VALUE ;
-        
+        //E' stata inserita una lista nulla 
+        if(itemsOrdered == null) {
+            throw new TakeAwayBillException("Hai inserito una lista nulla!");
+        }
+        //E' stata inserita una lista senza elementi
         if(itemsOrdered.isEmpty()) {
              return 0.0;
         }
-        
+        //E' stata inserita una lista con più di 30 elementi
         if(itemsOrdered.size()>30) {
             throw new TakeAwayBillException("Hai inserito troppe ordinazioni!");
         }
-
+        //Calcolo il totale 
         Iterator<MenuItem> iter = itemsOrdered.iterator();
         while (iter.hasNext()) {
 
@@ -53,7 +57,7 @@ public class Bill implements TakeAwayBill {
         }
 
     double finalBill = billPaniniAndFritti + billBibite;
-
+    //Applico gli sconti
     if(paniniCounter > 5) {
 
         finalBill = finalBill - cheapestPanino*0.5;
